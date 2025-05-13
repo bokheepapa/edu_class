@@ -3,7 +3,7 @@ SELECT
 FROM
     emp
 ORDER BY
-    ename DESC;
+    deptno asc, sal desc, ename desc;
 
 SELECT
     *
