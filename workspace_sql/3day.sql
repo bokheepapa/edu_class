@@ -115,6 +115,7 @@ select * from emp where ename like '%T%';
 select comm from emp where comm is not null;
 
 
+
 SELECT
     *
 FROM
