@@ -143,7 +143,7 @@ FROM
          emp e
     JOIN dept d USING ( deptno )
 WHERE
-    sal > 2000;
+    sal > 2000 ORDER BY DEPTNO, DNAME;
     
     
 -- SQL-99 X
@@ -158,7 +158,7 @@ FROM
     dept d
 WHERE
         e.deptno = d.deptno
-    AND sal > 2000;
+    AND sal > 2000 ORDER BY DEPTNO, DNAME;
 
 
 -- Q2
@@ -174,6 +174,20 @@ FROM
     JOIN emp e ON ( d.deptno = e.deptno )
 GROUP BY
     d.deptno;
+    
+    
+SELECT
+    deptno,
+    FLOOR(avg(sal)) AS avg_sal,
+    MAX(sal)        AS max_sal,
+    MIN(sal)        AS min_sal,
+    COUNT(empno)    AS cnt
+FROM
+         dept d
+    RIGHT OUTER JOIN emp e USING ( deptno )
+GROUP BY
+    deptno ORDER BY DEPTNO;    
+    
     
     
 -- SQL-99 X
@@ -205,7 +219,7 @@ FROM
     emp  e
     RIGHT OUTER JOIN dept d ON ( e.deptno = d.deptno )
 ORDER BY
-    deptno;
+    deptno, ENAME;
 
 
 -- SQL-99 X
@@ -244,8 +258,10 @@ FROM
     emp      e1
     RIGHT OUTER JOIN dept     d ON ( e1.deptno = d.deptno )
     LEFT OUTER JOIN emp      e2 ON ( e1.mgr = e2.empno )
-    FULL OUTER JOIN salgrade s ON ( e1.sal > s.losal
-                                    AND e1.sal < s.hisal )
+--    LEFT OUTER JOIN salgrade s ON ( e1.sal > s.losal
+--                                    AND e1.sal < s.hisal )
+    LEFT OUTER JOIN salgrade s ON ( e1.sal between s.losal
+                                    AND s.hisal )
 ORDER BY
     d.deptno,
     e1.empno;
@@ -273,8 +289,9 @@ FROM
 WHERE
         e1.deptno (+) = d.deptno
     AND e1.mgr = e2.empno (+)
-    AND e1.sal > s.losal (+)
-    AND e1.sal < s.hisal (+)
+--    AND e1.sal > s.losal (+)
+--    AND e1.sal < s.hisal (+)
+    AND e1.sal BETWEEN s.losal (+) AND s.hisal (+)
 ORDER BY
     d.deptno,
     e1.empno;
