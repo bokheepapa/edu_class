@@ -84,7 +84,7 @@ FROM (
 WHERE CNT > 3;
 
 
-
+-- Page 249
 -- Q1
 SELECT
     e.job,
@@ -146,9 +146,9 @@ ORDER BY
 SELECT
     e.empno,
     e.ename,
-    d.dname,
+    (select dname from dept where e.deptno = deptno) AS dname,
     e.hiredate,
-    d.loc,
+    (select loc from dept where e.deptno = deptno) AS loc,
     e.sal,
     (
         SELECT
@@ -172,12 +172,9 @@ FROM
                 FROM
                     emp
             )
-    )    e,
-    dept d
-WHERE
-    e.deptno = d.deptno
+    )    e
 ORDER BY
-    sal DESC,
+    e.sal DESC,
     empno;
     
 -- Q3    
@@ -211,6 +208,30 @@ WHERE
         WHERE
             deptno = 30
     );
+ 
+ 
+SELECT
+    e.empno  empno,
+    e.ename  ename,
+    e.job    job,
+    d.deptno deptno,
+    d.dname  dname,
+    d.loc    loc
+FROM
+    emp  e,
+    dept d
+WHERE
+        e.deptno = d.deptno
+    AND e.deptno = 10
+    AND job NOT IN (
+        SELECT
+            job
+        FROM
+            emp
+        WHERE
+            deptno = 30
+    );
+    
     
     
 -- Q4
