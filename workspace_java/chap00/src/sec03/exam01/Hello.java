@@ -16,10 +16,11 @@ public class Hello {
 		{
 			for(int y = 1; y < 10; y++) 
 			{
-				System.out.println(x + " * " + y + " = " + (x*y));
+				System.out.print(x + " * " + y + " = " + (x * y) + "  ");
 			}
 			
-			System.out.println("==========");
+			System.out.println(" ");
+			System.out.println(" ");
 		}
 		
 		System.out.println("Hello, Java!!");
