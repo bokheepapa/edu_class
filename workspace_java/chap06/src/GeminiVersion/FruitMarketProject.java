@@ -26,7 +26,8 @@ public class FruitMarketProject {
                 System.out.println("2. 과일 찾기");
                 System.out.println("3. 구매");
                 System.out.println("4. 배송상태");
-                System.out.println("5. 종료");
+                System.out.println("5. 항목 추가");                
+                System.out.println("6. 종료");
                 System.out.println("===================================");
                 System.out.print("메뉴를 선택해주세요: ");
 
@@ -48,10 +49,13 @@ public class FruitMarketProject {
                             fruitmarket.displaySellState(); // Using the optimized method
                             break;
                         case 5:
+                        	fruitmarket.addFruit(); // Using the optimized method
+                        	break;
+                        case 6:
                             System.out.println("프로그램을 종료합니다.");
                             return; // Exit the program
                         default:
-                            System.out.println("잘못된 메뉴 번호입니다. 1부터 5까지의 숫자를 입력해주세요.");
+                            System.out.println("잘못된 메뉴 번호입니다. 1부터 6까지의 숫자를 입력해주세요.");
                     }
                 } catch (InputMismatchException e) {
                     System.out.println("잘못된 입력입니다. 숫자를 입력해주세요.");

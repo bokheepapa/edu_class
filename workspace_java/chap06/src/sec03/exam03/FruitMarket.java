@@ -13,16 +13,17 @@ public class FruitMarket {
 	//FruitMarket class 필드
 	ArrayList<Fruit> fruit = new ArrayList<Fruit>();
 	String marketName;
-	Connection conn;
-	Statement oracle;
-//	Scanner scan = new Scanner(System.in);
+	static Connection conn;
+	static Statement oracle;
+	static ResultSet rs = null;
+	static Scanner scan = new Scanner(System.in);
 	
 	// FruitMarket 생성자
-	FruitMarket(String marketName){
+	public FruitMarket(String marketName){
 		this.marketName = marketName;
 	}
 	
-	void ConnDB() throws Exception{
+	public static void ConnDB() throws Exception{
 
 		String url = "jdbc:oracle:thin:@125.181.132.133:51521:xe"; 
         String user = "scott4_7";   
@@ -36,12 +37,12 @@ public class FruitMarket {
 		      
 	}
 	
-	void addFruit() throws Exception{
+	public void addFruit() throws Exception{
 		String fname;
 		int fprice, fcnt;
-		ResultSet rs = null;
 		
-		Scanner scan = new Scanner(System.in);
+		
+//		Scanner scan = new Scanner(System.in);
 		System.out.println("===================================");
 		System.out.print("추가할 과일 이름을 입력해주세요. : ");
 		fname = scan.nextLine();
@@ -114,7 +115,7 @@ public class FruitMarket {
 	
 	void sellFruit() throws Exception{
 		int position = 0;
-		Scanner scan = new Scanner(System.in);
+//		Scanner scan = new Scanner(System.in);
 		System.out.println("===================================");
 		System.out.print("구매할 과일 이름을 입력해주세요. : ");
 		String fname = scan.nextLine();
@@ -172,7 +173,7 @@ public class FruitMarket {
 	void search() {
 		System.out.println("===================================");
 		System.out.print("과일 이름을 입력해주세요. : ");
-		Scanner scan = new Scanner(System.in);
+//		Scanner scan = new Scanner(System.in);
 		String fname = scan.nextLine();
 		searchFruit(fname);
 	}	

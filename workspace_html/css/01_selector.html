@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css 주석 */
+
+        /* 전체 선택자 */
+        * {
+            color : red;
+        }
+
+        /* tag 선택자 */
+        h2 {
+            font-size: 300%; color: blue;
+        }
+
+        /* id 선택자 */
+        #a1 {
+            color: black;
+        }
+
+        #div1 {
+            background-color: gray;
+        }
+
+        /* 마우스 울렸을 때 */
+        #div1:hover {
+            background-color: yellow;
+        }
+
+        /* 클릭 했을 때 */
+        #div1:active {
+            color: black; 
+            font-size: 20px;
+        }
+
+        /* class 선택자 */
+        .c1 {
+            background-color : rgb(25, 129, 39);
+        }
+
+        .bigText {
+            font-size: 30px;
+        }
+
+        .text1:focus {
+            background-color: yellow;
+        }
+
+        /* 누군가의 첫번째 자식 */
+        li:first-child {
+            color: blue;
+        }
+
+        ul:first-child {
+            font-size: 30px;
+        }
+
+        /* 실제 등장하는 요소 중 첫번째 */
+        ul:first-of-type {
+            text-decoration: underline;
+        }
+
+        tr:nth-child(2n-1) {
+            background-color: rgb(13, 204, 109);
+        }
+
+        h3:after {
+            content:"AFTER";
+            font-size: 10px;
+            color: black;
+        }
+
+        h3:before {
+            content:"BEFORE";
+            font-size: 10px;
+            color: black;
+        }
+
+        /* 다중 선택자 */
+        /* li {
+            border: 1px solid red;
+        }
+        h3 {
+            border: 1px solid red;
+        } */
+
+        li, h3, #div1 {
+            border: 1px solid rgb(0, 153, 255);
+        }
+
+        /* > : 바로 아래 자식 요소 만*/
+        #ol1 > li {
+            color: black;
+        }
+
+        /* 띄어쓰기 : 자손들 모두를 대상으로 */
+        #ol1 li {
+            border: 1px solid black;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <h1 title="안녕?">hello world</h1>
+    <h2>hello world(부제목)</h2>
+    <ul>
+        <li class="c1 bigText">li 1</li>
+        <li id="a1" class="c1">li 2</li>
+        <li>li 3</li>
+    </ul>
+
+    <div id="div1">
+        hover 연습
+    </div>
+
+    <input type="text" class="text1">
+    <hr>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4
+                <ul>
+                    <li>4-1</li>
+                    <li>4-2</li>
+                    <li>4-3</li>
+                </ul>
+            </li>
+        </ul>
+    <hr>
+    <table border="1">
+        <tr>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla veniam dolorum id iusto itaque nisi? Tenetur voluptas expedita facilis numquam temporibus molestiae quisquam laudantium omnis cupiditate sunt tempore, ut aliquid?</td>
+        </tr>
+        <tr>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+        </tr>
+    </table>
+    <h3>before after</h3>
+
+    <ol id="ol1">
+        <li>1</li>
+        <li>2</li>
+        <li>
+            <ol>
+                <li>3-1</li>
+                <li>3-2</li>
+                <li>3-3</li>
+            </ol>
+        </li>
+    </ol>
+</body>
+</html>
