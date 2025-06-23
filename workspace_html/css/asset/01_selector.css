@@ -1,0 +1,153 @@
+/* css 주석 */
+
+/* 전체 선택자 */
+* {
+    color : red;
+}
+
+/* tag 선택자 */
+h2 {
+    font-size: 300%; color: blue;
+}
+
+/* id 선택자 */
+#a1 {
+    color: black;
+}
+
+#div1 {
+    background-color: gray;
+}
+
+/* 마우스 울렸을 때 */
+#div1:hover {
+    background-color: yellow;
+}
+
+/* 클릭 했을 때 */
+#div1:active {
+    color: black; 
+    font-size: 20px;
+}
+
+/* class 선택자 */
+.c1 {
+    background-color : rgb(25, 129, 39);
+}
+
+.bigText {
+    font-size: 30px;
+}
+
+.text1:focus {
+    background-color: yellow;
+}
+
+/* 누군가의 첫번째 자식 */
+li:first-child {
+    color: blue;
+}
+
+ul:first-child {
+    font-size: 30px;
+}
+
+/* 실제 등장하는 요소 중 첫번째 */
+ul:first-of-type {
+    text-decoration: underline;
+}
+
+tr:nth-child(2n) {
+    background-color: rgb(13, 204, 109);
+}
+
+h3:after {
+    content:"AFTER";
+    font-size: 10px;
+    color: black;
+}
+
+h3:before {
+    content:"BEFORE";
+    font-size: 10px;
+    color: black;
+}
+
+/* 다중 선택자 */
+/* li {
+    border: 1px solid red;
+}
+h3 {
+    border: 1px solid red;
+} */
+
+li, h3, #div1 {
+    border: 1px solid rgb(0, 153, 255);
+}
+
+/* > : 바로 아래 자식 요소 만*/
+#ol1 > li {
+    color: black;
+}
+
+/* 띄어쓰기 : 자손들 모두를 대상으로 */
+#ol1 li {
+    border: 1px solid black;
+}
+
+/* 속성 존재 여부 */
+[href] {
+    color: black;
+}
+
+/* 속성과 값이 모두 일치하는 요소 */
+/* #naver는 [id=naver]의 줄임말 */
+/* a#naver */
+a[id=naver] {
+    font-size: 30px;
+}
+
+/* 값으로 시작하는 속성과 속성 값의 요소 */
+[href^=https] {
+    color: green;
+    font-style: italic;
+}
+
+/* 키워드* */
+li[data-seq^=dddd] {
+    font-size: 40px;
+}
+
+/* *키워드 */
+li[data-seq$=dddd] {
+    font-size: 40px;
+}
+
+input[type=password]:focus {
+    background-color: yellow;
+}
+
+/* 부정 선택자 */
+/* input 태그 중에서 c3 클래스가 없는 모든 것 */
+input:not(.c3) {
+    color: rgb(212, 35, 153);
+    font-style: italic;
+}
+
+/* 속성 값 중에서 단어로 존재(공백으로 분리) */
+input[class~="c4"] {
+    color: gold;
+}
+
+::selection {
+    background-color: aqua;
+}
+
+input[type=checkbox]:checked {
+    width: 50px;
+    height: 50px;
+}
+
+input[type=checkbox]:checked + span {
+    font-size: 40px;
+}

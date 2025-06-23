@@ -1,0 +1,165 @@
+body{
+    border: 1px solid black;
+}
+
+.first{
+    /* border: 1px solid red; */
+
+    /* margin-top: 50px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+    margin-left: 20px; */
+
+    /* margin 축약형 */
+    /* 4개 일 때 : top, right, bottom, left */
+    margin: 50px 40px 30px 20px;
+    /* 3개 일 때 : top 좌우 bottom */
+    margin: 50px 30px 20px;
+    /* 2개 일 때 : 위아래 좌우 */
+    margin: 50px 30px;
+    /* 1개 일 때 : 상하좌우 전체 */
+    margin: 30px;
+
+    /* padding도 margin과 같음 */
+    padding: 20px;
+
+    border-top-width: 3px;
+    border-top-style: dotted;
+    border-top-color: blue;
+    
+    border-right: 2px dashed green;
+
+    border: 2px solid red;
+
+    border-radius: 50px;
+}
+
+.second{
+    border: 2px solid blue;
+
+    padding: 10px;
+
+    margin: 10px;
+
+    border-radius: 5px;
+
+    height: 500px;
+
+}
+
+.tableTop{
+    border: 2px solid green;
+
+    padding: 10px;
+
+    /* margin: 20px; */
+
+    border-radius: 5px;
+}
+
+.tableBottom{
+    border: 2px solid purple;
+
+    padding: 10px;
+
+    /* margin: 20px; */
+
+    border-radius: 5px;
+}
+
+.leftBar{
+    border: 2px solid tomato;
+
+    padding: 10px;
+
+    margin: 10px;
+
+    border-radius: 5px;
+
+    /* width, height는 내용을(컨텐츠)의 너비와 높이 */
+    width: 200px;
+    height: 600px;
+
+    /* 패딩+컨텐츠 까지만 칠해짐 */
+    background-color: chocolate;
+}
+
+.profile #img1{
+    border: 2px solid black;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 50px;
+    padding: 1px;
+}
+
+.profile #img2{
+    border: 2px solid black;
+    width: auto;
+    height: 60vh;
+    /* border-radius: 50%; */
+    margin-left: 20px;
+    margin-right: 1px;
+    padding: 1px;
+}
+
+.chat-left{
+    border: 1px solid black;
+    background-color: yellow;
+    width: fit-content;
+    text-align: left;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 0 10px 10px 10px;
+}
+
+.chat-right{
+    border: 1px solid black;
+    background-color: yellow;
+    width: fit-content;
+    text-align: left;
+    padding: 5px;
+    margin: 10px 10px 10px auto;
+    border-radius: 10px 0 10px 10px;
+}
+
+.third{
+    border: 1px solid red;
+    width: 70%;
+    min-width: 500px;
+    max-width: 700px;
+}
+
+hr{
+    margin: 20px;
+}
+
+.item-main{
+    padding: 10px 20px;
+    background-color: #3F3531;
+    color: #CAC5BE;
+}
+
+.item-sub{
+    padding: 10px 20px;
+    background-color: black;
+    color: #e0e0e0;
+}
+
+.item-sub a{
+    color: #ec9f19;
+}
+
+#profile-table{
+    margin:auto;
+}
+
+.item-sub ul{
+    list-style: none;
+    padding: 0;
+}
+
+.search-bar{
+    margin: 10px 0 10px 20vw;
+}
