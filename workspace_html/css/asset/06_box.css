@@ -21,7 +21,7 @@ body{
     margin: 30px;
 
     /* padding도 margin과 같음 */
-    padding: 20px;
+    padding: 80px 20px;
 
     border-top-width: 3px;
     border-top-style: dotted;
@@ -78,7 +78,7 @@ body{
 
     /* width, height는 내용을(컨텐츠)의 너비와 높이 */
     width: 200px;
-    height: 600px;
+    height: 800px;
 
     /* 패딩+컨텐츠 까지만 칠해짐 */
     background-color: chocolate;
@@ -152,7 +152,7 @@ hr{
 }
 
 #profile-table{
-    margin:auto;
+    margin: 0 auto;
 }
 
 .item-sub ul{
@@ -161,5 +161,42 @@ hr{
 }
 
 .search-bar{
-    margin: 10px 0 10px 20vw;
+    margin: 0 auto;
+}
+
+/* 
+    마진 중첩
+    세로 방향으로 붙어 있을 때 
+    margin이 더해 지지 않고 큰 값 하나만 적용되는 현상 
+*/
+/*
+    해법
+        border, padding 등 적용
+        컨텐츠 적기(<br> 등)
+        부모에 overflow: hidden 주기
+*/
+
+#div1, #div2, #div3{
+    border: 1px solid red;
+    /* padding: 1px; */
+}
+
+#div2, #div3{
+    margin: 20px;
+}
+
+#div3{
+    margin: 50px;
+}
+
+#div1{
+    margin: 30px;
+    overflow: hidden;
+}
+
+#auto{
+    border: 1px solid red;
+    width: 100px;
+    margin: 1px auto;
+    display: block;
 }

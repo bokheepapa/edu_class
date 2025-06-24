@@ -1,0 +1,45 @@
+body{
+    /* width: 500px; */
+    background-size: cover;
+    background-image: url(https://html5up.net/uploads/demos/tessellate/images/header.jpg);
+    background-repeat: no-repeat;
+}
+
+.main-title{
+    color: white;
+    font-size: 2.25em;
+    margin: 20px;
+}
+
+.sub-title{
+    font-size: 1.25em;
+    color: white;
+    margin: 20px;
+}
+
+.sub-title > a{
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px dotted;
+}
+
+.title{
+    margin-top: 180px;
+    /* margin: 0 auto; */
+    text-align: center;
+    font-weight: 100;
+}
+
+.title-button{
+    border: 1px solid white;
+    padding: 20px 50px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.233);
+    border-radius: 5px;
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.title-button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+}

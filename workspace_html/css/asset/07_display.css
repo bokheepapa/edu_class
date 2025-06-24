@@ -1,0 +1,71 @@
+#div{
+    border: 1px solid red; 
+}
+
+.block{
+    border: 1px solid red;
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    /* display: inline-block; */
+}
+
+.inline{
+    border: 1px solid red;
+    /* 너비 높이 줄 수 없다 */
+    width: 100px;
+    height: 50px;
+
+    /* 좌우만 되고 상하는 안됨 */
+    margin: 30px 50px;
+
+    /* 좌우만 되고 상하는 안됨. 단, border는 밀어짐 */
+    padding: 20px;
+    
+    /* display: block; */
+}
+
+.bg_blue{
+    background-color: blue;
+    color: #ffffff;    
+}
+
+.parent{
+    border: 1px dotted orange;
+    /* width: 200px; */
+    /* width: 100%; */
+    width: 400px;
+    font-size: 0;
+}
+
+.parent > div{
+    border: 1px dashed rgb(24, 120, 199);
+    /* width: 150px; */
+
+    box-sizing: border-box;
+    width: 200px;
+    height: 50px;
+
+    display: inline-block;
+
+    /* inline, inline-block만 적용 됨 */
+    vertical-align: top;
+    font-size: 16px;
+}
+
+.hide{
+    display: none;
+}
+
+.table{
+    display: table;
+}
+
+.table .td{
+    display: table-cell;
+    border: 1px solid red;
+    height: 100px;
+    width: 400px;
+
+    vertical-align: middle;
+}
