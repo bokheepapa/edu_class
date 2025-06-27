@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            border: 1px solid red;
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            color: white;
+            margin: 10px;
+            transition: all 2s;
+        }
+
+        .translate:hover{
+            transform: translate(10px, 20px);
+            transform: translate(50%, 50%);
+        }
+
+        .scale:hover{
+            transform: scale(1.5) ;
+            /* transform: scaleX(-1) ; */
+            
+        }
+
+        .rotate:hover{
+            transform: rotate(720deg);
+        }
+
+        .종합:hover{
+            transform: translate(50%, 50%) scale(1.5) rotate(720deg);
+        }
+
+        .skew:hover{
+            transform: skew(30deg);
+        }
+
+        .parent{
+            width: 30vw;
+            height: 30vh;
+            border: 1px solid red;
+
+            position: relative;
+        }
+
+        .child{
+            width: 100px;
+            height: 100px;
+            border: 1px solid blue;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        비교
+        <!-- <img id="img2" src="https://blog.kakaocdn.net/dna/dq8OFz/btq4AuchShs/AAAAAAAAAAAAAAAAAAAAAP937kzOuLPpkAnglJsSIKhPVq7p2msrvZRXnRpjo2Zx/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1751295599&allow_ip=&allow_referer=&signature=bBXj2s1eWsssuLYFwH%2FAmDMQBTU%3D" alt="펭귄"> -->
+    </div>
+    <div class="box translate">
+        translate
+        <!-- <img id="img2" src="https://blog.kakaocdn.net/dna/dq8OFz/btq4AuchShs/AAAAAAAAAAAAAAAAAAAAAP937kzOuLPpkAnglJsSIKhPVq7p2msrvZRXnRpjo2Zx/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1751295599&allow_ip=&allow_referer=&signature=bBXj2s1eWsssuLYFwH%2FAmDMQBTU%3D" alt="펭귄"> -->
+    </div>
+    <div class="box scale">
+        scale
+        <!-- <img id="img2" src="https://blog.kakaocdn.net/dna/dq8OFz/btq4AuchShs/AAAAAAAAAAAAAAAAAAAAAP937kzOuLPpkAnglJsSIKhPVq7p2msrvZRXnRpjo2Zx/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1751295599&allow_ip=&allow_referer=&signature=bBXj2s1eWsssuLYFwH%2FAmDMQBTU%3D" alt="펭귄"> -->
+    </div>
+    <div class="box rotate">
+        rotate
+        <!-- <img id="img2" src="https://blog.kakaocdn.net/dna/dq8OFz/btq4AuchShs/AAAAAAAAAAAAAAAAAAAAAP937kzOuLPpkAnglJsSIKhPVq7p2msrvZRXnRpjo2Zx/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1751295599&allow_ip=&allow_referer=&signature=bBXj2s1eWsssuLYFwH%2FAmDMQBTU%3D" alt="펭귄"> -->
+    </div>
+    <div class="box 종합">
+        종합
+        <!-- <img id="img2" src="https://blog.kakaocdn.net/dna/dq8OFz/btq4AuchShs/AAAAAAAAAAAAAAAAAAAAAP937kzOuLPpkAnglJsSIKhPVq7p2msrvZRXnRpjo2Zx/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1751295599&allow_ip=&allow_referer=&signature=bBXj2s1eWsssuLYFwH%2FAmDMQBTU%3D" alt="펭귄"> -->
+    </div>
+    <div class="box skew">
+        skew
+        <!-- <img id="img2" src="https://blog.kakaocdn.net/dna/dq8OFz/btq4AuchShs/AAAAAAAAAAAAAAAAAAAAAP937kzOuLPpkAnglJsSIKhPVq7p2msrvZRXnRpjo2Zx/img.gif?credential=yqXZFxpELC7KVnFOS48ylbz2pIh7yKj8&expires=1751295599&allow_ip=&allow_referer=&signature=bBXj2s1eWsssuLYFwH%2FAmDMQBTU%3D" alt="펭귄"> -->
+    </div>
+
+    <div class="parent">
+        <div class="child">
+
+        </div>
+    </div>
+</body>
+</html>

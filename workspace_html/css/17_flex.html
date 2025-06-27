@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex-container{
+            border: 1px solid green;
+            height: 300px;
+
+            display: flex;
+            /* display: inline-flex; */
+
+            /* main축 기본값 : 왼쪽에서 오른쪽으로
+            flex-direction : row */
+
+            /* 오른쪽에서 왼쪽으로 */
+            /* flex-direction: row-reverse; */
+
+            /* flex-direction: column-reverse; */
+
+            /* 기본값 */
+            /* flex-wrap: wrap-reverse; */
+
+            /* 기본값, main축의 start 방향으로 정렬 */
+            /* justify-content: flex-end; */
+
+            /* 가운데 정렬 */
+            /* justify-content: center; */
+
+            /* 균등한 간격으로 배치 */
+            /* justify-content: space-between; */
+
+            justify-content: space-around;
+
+            /* align-content: flex-start; */
+            flex-wrap: wrap;
+
+            /* align-content: space-around; */
+            align-content: space-evenly;
+        }
+
+        .flex-container .flex-item{
+            border: 1px solid red;
+            background-color: brown;
+            color: white;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+    </div>
+</body>
+</html>

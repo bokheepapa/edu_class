@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p {
+            border: 1px solid red;
+            height: 200px;
+            width: 200px;
+        }
+
+        .hidden{
+            overflow: hidden;
+        }
+
+        .scroll{
+            overflow: scroll;
+        }
+
+        .auto{
+            overflow: auto;
+        }
+
+        .parent {
+            border: 1px solid red;
+            width: 300px;
+            white-space: nowrap; /* 한 줄로 만들기 */
+            overflow: auto;
+        }
+
+        .parent div{
+            border: 1px solid rgb(8, 0, 255);
+            display: inline-block;
+            width: 100px;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="p hidden" title="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, amet fuga perferendis earum libero veniam minus, vero delectus quis, deleniti dolores! Veritatis molestias voluptatem earum et magnam culpa doloremque voluptas?">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, amet fuga perferendis earum libero veniam minus, vero delectus quis, deleniti dolores! Veritatis molestias voluptatem earum et magnam culpa doloremque voluptas?
+    </div>
+    <div class="p scroll" title="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, amet fuga perferendis earum libero veniam minus, vero delectus quis, deleniti dolores! Veritatis molestias voluptatem earum et magnam culpa doloremque voluptas?">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, amet fuga perferendis earum libero veniam minus, vero delectus quis, deleniti dolores! Veritatis molestias voluptatem earum et magnam culpa doloremque voluptas?
+    </div>
+    <div class="p auto" title="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi, amet fuga perferendis earum libero veniam minus, vero delectus quis, deleniti dolores! Veritatis molestias voluptatem earum et magnam culpa doloremque voluptas?">
+        Lorem, ipsum dolor sit amero velestias voluptatem earum et magnam culpa doloremque voluptas?
+    </div>
+
+    div>div{항목$}*5
+    <div class="parent">
+        <div>항목1</div>
+        <div>항목2</div>
+        <div>항목3</div>
+        <div>항목4</div>
+        <div>항목5</div>
+    </div>
+
+</body>
+</html>
