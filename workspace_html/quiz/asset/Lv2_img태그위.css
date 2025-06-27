@@ -1,0 +1,17 @@
+.main div{
+    border: 1px solid red;
+    display: inline-block;
+}
+
+.left{
+    
+    height: 800px;
+    width: 500px;
+    background-size: cover;
+    background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/846b63b1f34d58a4addcd7cb/pexelsphoto415945.jpeg);
+}
+
+.center {
+    height: 800px;
+    width: 500px;
+}

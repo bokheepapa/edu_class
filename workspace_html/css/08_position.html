@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="">
+    <style>
+        .parent{
+            border: 1px solid blue;
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            position: relative;
+            /* top: 200px;
+            left: 500px; */
+        }
+
+
+        .rel:hover{
+            z-index: 999;
+        }
+
+        .z1 {
+            background-color: rgb(108, 199, 169);
+            position: relative;
+            top: 50px;
+            left: 40px;
+
+            z-index: 3;
+        }
+        .z2 {
+            background-color: rgb(133, 102, 205);
+            position: relative;
+            top: 20px;
+            left: 20px;
+
+            z-index: 1;
+        }
+        .z3 {
+            background-color: rgb(183, 205, 102);
+            position: relative;
+            top: 10px;
+            left: 1px;
+            z-index: 2;
+        }
+
+        ul.main{
+            background-color: rgba(255, 255, 0, 0.685);
+            /* margin: 0; */
+        }
+
+        ul.main:hover + ul {
+            display: block;
+        }
+
+        ul.sub:hover {
+            display: block;
+        }
+
+        /* ul.sub */
+        ul.main + ul {
+            background-color: rgba(80, 194, 65, 0.685);
+            /* margin: 0; */
+            position: relative;
+            top: -18px;
+            left: 10px;
+
+            display: none;
+        }
+
+        .p1{
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+
+            position: absolute;
+            top: 100px;
+            
+        }
+
+        .c1{
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .p2{
+            border: 1px solid red;
+            margin-top: 200px;
+            width: 200px;
+            height: 200px;
+
+            position: relative;
+        }
+
+        .c2{
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+
+            position: absolute;
+            top: calc((200px / 2) - (100px / 2));
+            left: calc((200px / 2) - (100px / 2));
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="rect">ㅋㅋㅋㅋㅋㅋ</div> -->
+    <div class="parent">
+        <div class="rel z1">1번</div>
+        <div class="rel z2">2번</div>
+        <div class="rel z3">3번</div>
+    </div>
+
+    <ul class="main">
+        <li>메인메뉴</li>
+    </ul>
+    <ul class="sub">
+        <li>서브메뉴1</li>
+        <li>서브메뉴2</li>
+        <li>서브메뉴3</li>
+    </ul>
+
+    <div class="p1">
+        부모박스
+        <div class="c1">
+            자식박스
+        </div>
+    </div>
+
+    <div class="p2">
+        부모박스
+        <div class="c2">
+            자식박스
+        </div>
+    </div>
+
+    <div></div>
+    
+</body>
+</html>

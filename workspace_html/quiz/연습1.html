@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* border: 1px solid red; */
+        }
+        .main > div{
+            display: inline-block;
+            /* box-sizing: border-box; */
+        }
+
+        .sel-img{
+            width: 100px;
+        }
+
+        .sel-img > div{
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .sel1{
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9YyYZHDt3ybUO-niJ99oq2BwKv77WLGMEOg&s);
+        }
+
+        .sel1:hover > .main-img1{
+            display: block;
+        }
+
+        .sel2:hover > .main-img2{
+            display: block;
+        }
+
+        .sel3:hover > .main-img3{
+            display: block;
+        }
+
+        .sel2{
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyVAvCXgWEQKYN6lNB44INE6nOw3dWUzbcmoeqeAmyZzmeiELm_KtgjEJ2mNQaFoJPQRQ&usqp=CAU);
+        }
+
+        .sel3{
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100px;
+            height: 100px;
+            background-image: url(https://mblogthumb-phinf.pstatic.net/MjAyMzAxMDRfMTMg/MDAxNjcyODEwMDQ2NTU1.5ewivm4y6mWb2b-LDYTDub3301IfqGOQd8XCCAvVY9Yg.hBPBk3BhXSQKD8W7uQ6Y9C9zPFpFZHoCGEHLEorEMogg.PNG.oksubenne/SE-2000dbac-a7d5-41be-bf8a-22d328d625da.png?type=w800);
+        }
+
+        .main-img1 {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 120px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: block;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9YyYZHDt3ybUO-niJ99oq2BwKv77WLGMEOg&s);
+        }
+
+        .main-img2 {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 120px;
+            top: 8px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: none;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyVAvCXgWEQKYN6lNB44INE6nOw3dWUzbcmoeqeAmyZzmeiELm_KtgjEJ2mNQaFoJPQRQ&usqp=CAU);
+
+        }
+
+        .main-img3 {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            left: 120px;
+            top: 8px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: none;
+            background-image: url(https://mblogthumb-phinf.pstatic.net/MjAyMzAxMDRfMTMg/MDAxNjcyODEwMDQ2NTU1.5ewivm4y6mWb2b-LDYTDub3301IfqGOQd8XCCAvVY9Yg.hBPBk3BhXSQKD8W7uQ6Y9C9zPFpFZHoCGEHLEorEMogg.PNG.oksubenne/SE-2000dbac-a7d5-41be-bf8a-22d328d625da.png?type=w800);
+
+        }
+
+        .img-main{
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="sel-img">
+            <div class="sel1">
+                <!-- 그림1 -->
+                 <div class="main-img1">
+                    <!-- main img1 -->
+                </div>
+            </div>
+            <div class="sel2">
+                <!-- 그림2 -->
+                 <div class="main-img2">
+                    <!-- main img2 -->
+                </div>
+            </div>
+            <div class="sel3">
+                <!-- 그림3 -->
+                <div class="main-img3">
+                    <!-- main img3 -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
